@@ -72,7 +72,7 @@ public class ReadQuery {
             while(this.results.next()) {
                 
                 Ships ship = new Ships();
-                ship.setShipName(this.results.getString("shipName"));
+                ship.setShipName(this.results.getString("name"));
                 ship.setDateBuilt(this.results.getString("dateBuilt"));
                 ship.setFleet(this.results.getString("fleet"));
                 ship.setCrewSize(this.results.getInt("crewSize"));
@@ -115,7 +115,7 @@ public class ReadQuery {
             Logger.getLogger(ReadQuery.class.getName()).log(Level.SEVERE, null, ex);
         }
        
-       
+   
        
        table += "</table>";
        
@@ -123,4 +123,4 @@ public class ReadQuery {
     
    }
    
-}
+}   
