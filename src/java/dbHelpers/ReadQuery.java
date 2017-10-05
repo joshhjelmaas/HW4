@@ -73,6 +73,7 @@ public class ReadQuery {
                 
                 Ships ship = new Ships();
                 ship.setShipName(this.results.getString("shipName"));
+                ship.setDateBuilt(this.results.getString("dateBuilt"));
                 ship.setFleet(this.results.getString("fleet"));
                 ship.setCrewSize(this.results.getInt("crewSize"));
                 ship.setCommander(this.results.getString("commander"));
@@ -80,29 +81,33 @@ public class ReadQuery {
                 ship.setShipID(this.results.getInt("shipID"));
                 
                 table += "<tr>";
-                table += "<td>";
-                table += ship.getShipName();
-                table += "</td>";
+                    table += "<td>";
+                        table += ship.getShipName();
+                    table += "</td>";
                 
-                table += "<td>";
-                table += ship.getFleet();
-                table += "</td>";
+                    table += "<td>";
+                        table += ship.getDateBuilt();
+                    table += "</td>";
                 
-                table += "<td>";
-                table += ship.getCrewSize();
-                table += "</td>";
+                    table += "<td>";
+                        table += ship.getFleet();
+                    table += "</td>";
                 
-                table += "<td>";
-                table += ship.getCommander();
-                table += "</td>";
+                    table += "<td>";
+                        table += ship.getCrewSize();
+                    table += "</td>";
                 
-                table += "<td>";
-                table += ship.getStatus();
-                table += "</td>";
+                    table += "<td>";
+                        table += ship.getCommander();
+                    table += "</td>";
                 
-                table += "<td>";
-                table += ship.getShipID();
-                table += "</td>";
+                    table += "<td>";
+                        table += ship.getStatus();
+                    table += "</td>";
+                
+                    table += "<td>";
+                        table += ship.getShipID();
+                    table += "</td>";
                 
                 table += "</tr>";
                 
